@@ -16,9 +16,7 @@ export class ListCustomerComponent implements OnInit {
 
   ngOnInit() {
     this.service.getCustomers()
-      .subscribe(data => {
-        this.customers = data;
-      });
+      .subscribe(data => this.customers = data );
   }
 
   deleteCustomer( customer: Customer ): void {
