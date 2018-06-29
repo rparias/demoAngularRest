@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CustomerService } from '../../services/customer.service';
 import { Router } from '@angular/router';
 import {first} from 'rxjs/operators';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-customer',
@@ -45,6 +46,13 @@ export class EditCustomerComponent implements OnInit {
       .pipe(first())
       .subscribe( data => {
         this.router.navigate(['list-customer']);
+        swal({
+          position: 'top',
+          type: 'success',
+          title: `Cliente modificado con éxito`,
+          showConfirmButton: false,
+          timer: 1500
+        });
       },
       error => {
         alert(error);
