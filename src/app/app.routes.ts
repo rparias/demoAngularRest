@@ -7,6 +7,6 @@ export const ROUTES: Routes = [
     { path: 'add-customer', component: AddCustomerComponent },
     { path: 'edit-customer', component: EditCustomerComponent },
     { path: 'list-customer', component: ListCustomerComponent },
-    { path: '', pathMatch: 'full', redirectTo: 'home' },
-    { path: '**', pathMatch: 'full', redirectTo: 'home' }
+    { path: '', pathMatch: 'full', redirectTo: 'list-customer' },
+    { path: '**', pathMatch: 'full', redirectTo: 'list-customer' }
 ];

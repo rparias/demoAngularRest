@@ -12,6 +12,9 @@ import { ListCustomerComponent } from './components/list-customer/list-customer.
 import { ROUTES } from './app.routes';
 import { RouterModule } from '@angular/router';
 
+// Importar ReactiveFormsModule para los formularios
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot( ROUTES, { useHash: true } )
+    RouterModule.forRoot( ROUTES, { useHash: true } ),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
