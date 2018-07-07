@@ -49,6 +49,44 @@ El proceso puede tardar unos minutos.
 
 [logo2]: https://i.gyazo.com/139fc74bb47ca4e1565b5ccfe4ded665.png "Crear ruta"
 
+7. Vamos a modificar el archivo app.module.ts y lo vamos a dejar de la siguiente manera:
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { AddCustomerComponent } from './components/add-customer/add-customer.component';
+import { EditCustomerComponent } from './components/edit-customer/edit-customer.component';
+import { ListCustomerComponent } from './components/list-customer/list-customer.component';
+
+// Importar rutas
+import { ROUTES } from './app.routes';
+import { RouterModule } from '@angular/router';
+
+// Importar ReactiveFormsModule para los formularios
+import { ReactiveFormsModule } from '@angular/forms';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    AddCustomerComponent,
+    EditCustomerComponent,
+    ListCustomerComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    RouterModule.forRoot( ROUTES, { useHash: true } ),
+    ReactiveFormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+```
 
 3. Ingresamos como root a MySQL y creamos un nuevo usuario, con las siguientes sentencias SQL:
 ```sql
