@@ -449,9 +449,10 @@ export class EditCustomerComponent implements OnInit {
 21. Es importante que este corriendo el [backend en Spring](https://github.com/rparias/demoSpringRest)
 
 22. Se abrirá el navegador y el proyecto funcionará, como se ve en la siguiente imagen:
-![alt text][logo2]
 
-[logo2]: https://i.gyazo.com/0ee676536da1f50600fd14338d531928.png "Ejecutar"
+![alt text][logo6]
+
+[logo6]: https://i.gyazo.com/f5993bb1cb48bcab0ec49fe54c8caa3b.png "Ejecutar"
 
 
 
