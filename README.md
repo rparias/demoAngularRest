@@ -25,7 +25,9 @@ El proceso puede tardar unos minutos.
 4. Abrimos la terminal de Visual Studio Code y escribimos los siguientes comandos:
 
 `ng generate component components/add-customer --spec=false -is`
+
 `ng generate component components/edit-customer --spec=false -is`
+
 `ng generate component components/list-customer --spec=false -is`
 
 `ng generate class model/customer`
@@ -33,15 +35,16 @@ El proceso puede tardar unos minutos.
 `ng generate service services/customer --spec=false`
 
 5. Al finalizar tendremos una estructura similar a esta:
+
 ![alt text][logo]
 
 [logo]: https://i.gyazo.com/d9b3fbf61b095f10826d14fa4913be94.png "Estructura del proyecto"
 
 6. En la carpeta app vamos a dar clic derecho > new file y lo vamos a llamar app.routes.ts, como se ve a continuación:
+
 ![alt text][logo1]
 
 [logo1]: https://i.gyazo.com/776ff202808d37597dac747b4df16da6.png "Crear ruta"
-
 ![alt text][logo2]
 
 [logo2]: https://i.gyazo.com/139fc74bb47ca4e1565b5ccfe4ded665.png "Crear ruta"
