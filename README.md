@@ -53,6 +53,22 @@ El proceso puede tardar unos minutos.
 
 [logo2]: https://i.gyazo.com/139fc74bb47ca4e1565b5ccfe4ded665.png "Crear ruta"
 
+7.1. Agregamos el siguiente código en el archivo app.routes.ts:
+```typescript
+import { Routes } from '@angular/router';
+import { AddCustomerComponent } from './components/add-customer/add-customer.component';
+import { EditCustomerComponent } from './components/edit-customer/edit-customer.component';
+import { ListCustomerComponent } from './components/list-customer/list-customer.component';
+
+export const ROUTES: Routes = [
+    { path: 'add-customer', component: AddCustomerComponent },
+    { path: 'edit-customer', component: EditCustomerComponent },
+    { path: 'list-customer', component: ListCustomerComponent },
+    { path: '', pathMatch: 'full', redirectTo: 'list-customer' },
+    { path: '**', pathMatch: 'full', redirectTo: 'list-customer' }
+];
+```
+
 8. Vamos a modificar el archivo app.module.ts y lo vamos a dejar de la siguiente manera:
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
